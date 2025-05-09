@@ -14,7 +14,10 @@ if (!CLERK_PUBLISHABLE_KEY) {
 
 function RootLayoutNav() {
   return (
-    <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY} tokenCache={tokenCache}>
+    <ClerkProvider
+      publishableKey={CLERK_PUBLISHABLE_KEY}
+      tokenCache={tokenCache}
+    >
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
       </Stack>
