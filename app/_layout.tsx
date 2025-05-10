@@ -8,7 +8,7 @@ const CLERK_PUBLISHABLE_KEY = process.env
 
 if (!CLERK_PUBLISHABLE_KEY) {
   throw new Error(
-    "Missing Publishable Key. Please set EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY in your .env"
+    "Missing Publishable Key. Please set `EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY` in your `.env`"
   )
 }
 
@@ -18,9 +18,11 @@ function RootLayoutNav() {
       publishableKey={CLERK_PUBLISHABLE_KEY}
       tokenCache={tokenCache}
     >
+      {/* <ClerkLoaded> */}
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
       </Stack>
+      {/* </ClerkLoaded> */}
     </ClerkProvider>
   )
 }
